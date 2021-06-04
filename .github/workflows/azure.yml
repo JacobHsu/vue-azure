@@ -37,8 +37,9 @@ jobs:
       run: |
         # Build and test the project, then
         # deploy to Azure Web App.
-        yarn install --ignore-engines
-        yarn build --if-present
+        npm install
+        npm run build --if-present
+        npm run test --if-present
     - name: add process.json
       run: |
         echo '{ script: "serve", env: { PM2_SERVE_SPA: "true", PM2_SERVE_HOMEPAGE: "/index.html" } }' >> dist/process.json
