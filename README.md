@@ -37,6 +37,9 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: 'dist'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
 
+- name: add process.json
+  run: |
+    echo '{ script: "serve", env: { PM2_SERVE_SPA: "true", PM2_SERVE_HOMEPAGE: "/index.html" } }' >> dist/process.json
 - name: npm install, build, and test
     run: |
     # Build and test the project, then
