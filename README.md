@@ -5,6 +5,9 @@ This template should help get you started developing with Vue 3 and Typescript i
 [Vite](https://v3.cn.vuejs.org/guide/installation.html#vite)  
 `$ npm init @vitejs/app <project-name>`  
 
+[Scaffolding Your First Vite Project](https://vitejs.dev/guide/#browser-support)
+Vite requires Node.js version >=12.0.0.  
+
 ## Azure
 
 [在 Azure 中建立 Node.js Web 應用程式](https://docs.microsoft.com/zh-tw/azure/app-service/quickstart-nodejs?pivots=platform-linux)  
@@ -47,6 +50,8 @@ Actions > All workflows > 1 workflow run
 ### debug
 
 >　error @vitejs/plugin-vue@1.2.3: The engine "node" is incompatible with this module. Expected version ">=12.0.0". Got "10.24.1"
+
+`yarn install --ignore-engines`
 
 建立 Web 應用程式  執行階段堆疊 選 `Node 14 LTS`
 
