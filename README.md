@@ -33,9 +33,22 @@ env:
   AZURE_WEBAPP_NAME: vue-azure    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: 'dist'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '10.x'                # set this to the node version to use
+
+- name: npm install, build, and test
+    run: |
+    # Build and test the project, then
+    # deploy to Azure Web App.
+    yarn
+    yarn build --if-present
 ```
 
 Actions > All workflows > 1 workflow run
+
+### debug
+
+>　error @vitejs/plugin-vue@1.2.3: The engine "node" is incompatible with this module. Expected version ">=12.0.0". Got "10.24.1"
+
+建立 Web 應用程式  執行階段堆疊 選 `Node 14 LTS`
 
 ## Recommended IDE Setup
 
